@@ -1,0 +1,10 @@
+div {
+    width: 50%;
+    height: 300px;
+    font-size: 100px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: black;
+    color: blanchedalmond;
+    margin: 0 auto;
+}
