@@ -9,11 +9,35 @@
 </head>
 
 <body>
-    <h1>Temperature</h1>
+    <!-- <h1>Temperature</h1>
     <div id="temp"></div><br><br>
     <h1>Pulserate</h1>
     <div id="pulrat"></div><br>
-    <button id="ctrl">ON/OFF</button>
+    <button id="ctrl">ON/OFF</button> -->
+    <div class="head">IOT Based Health Monitoring</div>
+    <div id="button"><button id="ctrl">ON/OFF</button></div>
+    <div class="contents">
+        <div class="side1">
+            <div class="temp-class">
+                <div class="name">TEMPERATURE</div>
+                <div id="temp"></div>
+            </div>
+            <div class="pulse-class">
+                <div class="name">PULSE RATE</div>
+                <div id="pulrat"></div>
+            </div>
+        </div>
+        <div class="side2">
+            <div class="stress-class">
+                <div class="name">STRESS</div>
+                <div id="str"></div>
+            </div>
+            <div class="location-class">
+                <div class="name">LOCATION</div>
+                <div id="loc"></div>
+            </div>
+        </div>
+    </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
