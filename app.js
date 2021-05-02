@@ -12,7 +12,8 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-var plug = "off";
+var plug = "off",
+    lat, lng;
 /*
 //--------Method 1-------/
 
@@ -60,4 +61,35 @@ var readref = firebase.database().ref('object');
 readref.on('value', (snapshot) => {
     document.getElementById('temp').innerHTML = snapshot.val().temperature;
     document.getElementById('pulrat').innerHTML = snapshot.val().pulserate;
+    lat = snapshot.val().latitude;
+    lng = snapshot.val().longitude;
+    myMap(lat, lng);
 });
+
+//---------location----------/
+
+function myMap(lat, lng) {
+    let location = {
+        lat,
+        lng
+    };
+    if (lat && lng) {
+        try {
+            let mapProp = {
+                center: new google.maps.LatLng(location.lat, location.lng),
+                zoom: 5,
+            };
+            let map = new google.maps.Map(document.getElementById("loc"), mapProp);
+            let marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                map.setZoom(15);
+                map.setCenter(marker.getPosition());
+            });
+        } catch (error) {
+            throw error;
+        }
+    }
+}
