@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "firebase": "^8.4.3",
     "twilio": "^3.61.0"
   },
