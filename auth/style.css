@@ -1,0 +1,11 @@
+#signout_btn {
+    display: none;
+}
+
+#signout_btn.visible {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

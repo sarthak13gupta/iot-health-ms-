@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Firebase practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <h1>Temperature</h1>
+    <div id="temp"></div><br><br>
+    <h1>Pulserate</h1>
+    <div id="pulrat"></div><br>
+    <button id="ctrl">ON/OFF</button> -->
+    <div class="head">IOT Based Health Monitoring</div>
+    <div id="button"><button id="ctrl">ON/OFF</button></div>
+    <div class="contents">
+        <div class="side1">
+            <div class="temp-class">
+                <div class="name">TEMPERATURE</div>
+                <div id="temp"></div>
+            </div>
+            <div class="pulse-class">
+                <div class="name">PULSE RATE</div>
+                <div id="pulrat"></div>
+            </div>
+        </div>
+        <div class="side2">
+            <div class="stress-class">
+                <div class="name">STRESS</div>
+                <div id="str">
+
+                </div>
+            </div>
+
+            <div class="location-class">
+                <div class="name">LOCATION</div>
+                <div id="loc" style="height: 400px; width: 80%; overflow: scroll;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="location-classs">
+        <div class="name">LOCATION</div>
+        <div id="loc" style="width:75%;height:400px; z-index: 9999"></div>
+    </div> -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+
+    <!-----------------location--------------->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6seJJDrEbqLGaFpW_IBpdvaXJiHKCA3s&callback=myMap"></script>
+
+</body>
+
+</html>

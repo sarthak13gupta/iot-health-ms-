@@ -1,0 +1,5 @@
+
+notification/node_modules/
+notification/.env
+.DS_Store
+*/.DS_Store
